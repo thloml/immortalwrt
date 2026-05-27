@@ -116,6 +116,9 @@ platform_do_upgrade() {
 	glinet,gl-xe3000|\
 	huasifei,wh3000-emmc|\
 	huasifei,wh3000-pro|\
+	philips,hy3000|\
+	sn,r1|\
+	sn,r1-longlife|\
 	smartrg,sdg-8612|\
 	smartrg,sdg-8614|\
 	smartrg,sdg-8622|\
@@ -237,6 +240,9 @@ platform_copy_config() {
 	glinet,gl-xe3000|\
 	huasifei,wh3000-emmc|\
 	huasifei,wh3000-pro|\
+	philips,hy3000|\
+	sn,r1|\
+	sn,r1-longlife|\
 	jdcloud,re-cp-03|\
 	smartrg,sdg-8612|\
 	smartrg,sdg-8614|\

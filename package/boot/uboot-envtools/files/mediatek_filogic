@@ -132,6 +132,10 @@ openembed,som7981)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x80000" "0x80000"
 	ubootenv_add_uci_sys_config "/dev/mtd3" "0x0" "0x100000" "0x100000"
 	;;
+sn,r1|\
+sn,r1-longlife)
+	ubootenv_add_uci_config "/dev/mmcblk0p1" "0x0" "0x20000" "0x20000" "0"
+	;;
 openwrt,one)
 	ubootenv_add_ubi_default
 	;;

@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+
+/dts-v1/;
+#include "mt7981b-sn-r1-common.dtsi"
+
+/ {
+	model = "SN R1 Longlife";
+	compatible = "sn,r1-longlife", "sn,r1", "mediatek,mt7981";
+
+	aliases {
+		label-mac-device = &gmac0;
+		led-boot = &led_status_red;
+		led-failsafe = &led_status_red;
+		led-running = &led_status_green;
+		led-upgrade = &led_status_green;
+		serial0 = &uart0;
+	};
+
+	gpio-leds {
+		compatible = "gpio-leds";
+
+		led_status_red: led-0 {
+			color = <LED_COLOR_ID_RED>;
+			function = LED_FUNCTION_STATUS;
+			gpios = <&pio 13 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+
+		led_status_green: led-1 {
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_STATUS;
+			gpios = <&pio 11 GPIO_ACTIVE_HIGH>;
+		};
+
+		led-2 {
+			color = <LED_COLOR_ID_AMBER>;
+			function = LED_FUNCTION_STATUS;
+			gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
+		};
+	};
+};
+
+&mmc0 {
+	/delete-property/ cap-mmc-highspeed;
+	/delete-property/ mmc-hs200-1_8v;
+	/delete-property/ pinctrl-1;
+	/delete-property/ vqmmc-supply;
+	max-frequency = <26000000>;
+	pinctrl-names = "default";
+};

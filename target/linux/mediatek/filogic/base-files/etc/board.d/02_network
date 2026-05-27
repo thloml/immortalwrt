@@ -57,6 +57,7 @@ mediatek_setup_interfaces()
 		;;
 	asus,tuf-ax4200|\
 	iptime,ax3000sm|\
+	philips,hy3000|\
 	iptime,ax7800m-6e|\
 	jdcloud,re-cp-03|\
 	mediatek,mt7981-rfb|\
@@ -151,6 +152,8 @@ mediatek_setup_interfaces()
 	tplink,re6000xd)
 		ucidef_set_interface_lan "lan1 lan2 eth1"
 		;;
+	sn,r1|\
+	sn,r1-longlife|\
 	tplink,tl-7dr7230-v1|\
 	tplink,tl-7dr7230-v2)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" wan
