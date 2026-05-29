@@ -20,8 +20,6 @@ define Device/mediatek_mt7988d-rfb
 	mt7988a-rfb-eth2-mxl \
 	mt7988a-rfb-spidev \
 	mt7988d-rfb-eth2-an8831x \
-	mt7988d-rfb-eth2-sfp \
-	mt7988d-rfb-eth0-gsw \
 	mt7988d-rfb-2pcie
   DEVICE_DTS_DIR := $(DTS_DIR)/
   DEVICE_DTC_FLAGS := --pad 4096
