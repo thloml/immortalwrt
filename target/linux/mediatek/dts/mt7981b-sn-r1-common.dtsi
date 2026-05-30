@@ -235,14 +235,10 @@
 
 	band@0 {
 		reg = <0>;
-		nvmem-cells = <&macaddr_factory_a002a 1>;
-		nvmem-cell-names = "mac-address";
 	};
 
 	band@1 {
 		reg = <1>;
-		nvmem-cells = <&macaddr_factory_a002a 2>;
-		nvmem-cell-names = "mac-address";
 	};
 };
 
