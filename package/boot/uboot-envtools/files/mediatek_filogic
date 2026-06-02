@@ -216,7 +216,8 @@ openembed,som7981)
 	;;
 sn,r1|\
 sn,r1-longlife)
-	ubootenv_add_uci_config "/dev/mmcblk0p1" "0x0" "0x20000" "0x20000" "0"
+	local envdev=$(find_mmc_part "u-boot-env")
+	ubootenv_add_uci_config "$envdev" "0x0" "0x80000"
 	;;
 openwrt,one)
 	ubootenv_add_ubi_default
